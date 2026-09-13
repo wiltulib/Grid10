@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <script>
+      (function() {
+        try {
+          var currentFetch = window.fetch ? (typeof window.fetch === 'function' ? window.fetch.bind(window) : window.fetch) : undefined;
+          var patch = function(target) {
+            try {
+              if (target) {
+                Object.defineProperty(target, 'fetch', {
+                  get: function() { return currentFetch; },
+                  set: function(fn) { currentFetch = fn; },
+                  configurable: true,
+                  enumerable: true
+                });
+              }
+            } catch (_) {}
+          };
+          patch(window);
+          if (typeof Window !== 'undefined' && Window.prototype) {
+            patch(Window.prototype);
+          }
+        } catch (e) {
+          // Safeguard fallback
+        }
+      })();
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>GRID10</title>
+    <meta name="description" content="A sleek, responsive 10x10 tactical grid block puzzle game with drag-and-drop mechanics, combo line clears, sound effects, and high score tracking." />
+    <meta property="og:title" content="GRID10" />
+    <meta property="og:description" content="A sleek, responsive 10x10 tactical grid block puzzle game with drag-and-drop mechanics, combo line clears, sound effects, and high score tracking." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <script>
+      (function() {
+        try {
+          if (localStorage.getItem('1010_block_darkmode') === 'true') {
+            document.documentElement.classList.add('dark');
+          }
+        } catch (_) {}
+      })();
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@700;800;900&display=swap" rel="stylesheet" />
+  </head>
+  <body class="overflow-x-hidden antialiased select-none" style="background-color: var(--bg, #F8F7F4); color: var(--ink, #111113);">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+

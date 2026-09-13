@@ -1,0 +1,6 @@
+{
+  "name": "GRID10",
+  "description": "A sleek, responsive 10x10 tactical grid block puzzle game with drag-and-drop mechanics, combo line clears, sound effects, and high score tracking.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

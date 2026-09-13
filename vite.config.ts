@@ -5,7 +5,7 @@ import {defineConfig} from 'vite';
 
 export default defineConfig(() => {
   return {
-    base: '/Grid10-Game/',
+    base: '/Grid10-Game-/',
     plugins: [react(), tailwindcss()],
     resolve: {
       alias: {

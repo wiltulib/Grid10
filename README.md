@@ -1,1 +1,1 @@
-[![Play Now](https://shields.io)](https://wiltulib.github.io/Grid10-Game-/)
+[![Play Now](https://shields.io)](https://wiltulib.github.io/Grid10-Game/)

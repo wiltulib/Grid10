@@ -36,29 +36,34 @@ export const BlockCell: React.FC<BlockCellProps> = React.memo(({
       data-col={col}
       onPointerDown={() => onPointerDown?.(row, col)}
       onPointerEnter={() => onPointerEnter?.(row, col)}
-      className={`relative w-full h-full aspect-square select-none flex items-center justify-center cursor-pointer box-border transition-colors duration-75 ${
+      className={`relative w-full h-full aspect-square select-none flex items-center justify-center cursor-pointer box-border transition-colors duration-75 bg-bg hover:bg-[#EFECE6] ${
         !isLastCol ? 'border-r border-ink/30' : ''
       } ${
         !isLastRow ? 'border-b border-ink/30' : ''
-      } ${
-        isFilled
-          ? isClearing
-            ? 'animate-cell-clear z-30'
-            : `${cell.gradient ?? 'bg-[#F59E0B]'} ring-1 ring-inset ring-ink z-10`
-          : 'bg-bg hover:bg-[#EFECE6]'
       }`}
     >
+      {/* The actual filled block */}
+      {isFilled && (
+        <div 
+          className={`absolute inset-0 ${
+            isClearing 
+              ? 'animate-cell-clear z-30' 
+              : `${cell.gradient ?? 'bg-[#F59E0B]'} ring-1 ring-inset ring-ink z-10`
+          }`}
+        />
+      )}
+
       {/* Ghost placement preview on table - static, clear preview */}
       {isGhost && !isFilled && (
         <div
-          className={`w-full h-full flex items-center justify-center ${
+          className={`absolute inset-0 flex items-center justify-center ${
             isGhostValid
               ? `${ghostGradient ?? 'bg-[#F59E0B]'} ring-1 ring-inset ring-ink opacity-80`
               : 'bg-[#FF5A5F]/35'
           }`}
         />
       )}
-
+      
       {isGhost && isFilled && !isGhostValid && (
         <div className="absolute inset-0 bg-[#FF5A5F]/35 z-20 pointer-events-none" />
       )}

@@ -1,39 +1,52 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-  <!-- Background -->
+  <!-- Outer Background -->
   <rect width="512" height="512" fill="#18181b" />
   
-  <!-- Main Container Border -->
-  <rect x="40" y="40" width="432" height="432" fill="#222225" stroke="#f4f4f5" stroke-width="8" />
+  <!-- Main Container (Darker grey with crisp white border) -->
+  <rect x="60" y="44" width="392" height="424" fill="#222225" stroke="#f4f4f5" stroke-width="6" />
 
-  <!-- Gap = 12, Padding = 24, Cell Size = (432 - 48 - 36) / 4 = 348 / 4 = 87 -->
-  
-  <g stroke="#3f3f46" stroke-width="2">
-    <!-- Row 1 (y=64) -->
-    <!-- Col 1 (x=64) -->
-    <rect x="64" y="64" width="87" height="87" fill="#f4f4f5" stroke="none" />
-    <!-- Col 2 (x=163) -->
-    <rect x="163" y="64" width="87" height="87" fill="#f4f4f5" stroke="none" />
-    <!-- Col 3 (x=262) -->
-    <rect x="262" y="64" width="87" height="87" fill="#FF5A5F" stroke="none" />
-    <!-- Col 4 (x=361) -->
-    <rect x="361" y="64" width="87" height="87" fill="#18181b" />
+  <!-- 
+    Padding = 24
+    Start X = 60 + 24 = 84
+    Start Y = 44 + 24 = 68
+    Gap = 8
+    Cell Size = (392 - 48 - (3 * 8)) / 4 = (344 - 24) / 4 = 320 / 4 = 80
+    Positions:
+    0: 84
+    1: 84 + 80 + 8 = 172
+    2: 172 + 80 + 8 = 260
+    3: 260 + 80 + 8 = 348
     
-    <!-- Row 2 (y=163) -->
-    <rect x="64" y="163" width="87" height="87" fill="#18181b" />
-    <rect x="163" y="163" width="87" height="87" fill="#10B981" stroke="none" />
-    <rect x="262" y="163" width="87" height="87" fill="#FF5A5F" stroke="none" />
-    <rect x="361" y="163" width="87" height="87" fill="#FF5A5F" stroke="none" />
+    Y Positions:
+    0: 68
+    1: 68 + 80 + 8 = 156
+    2: 156 + 80 + 8 = 244
+    3: 244 + 80 + 8 = 332
+  -->
+  
+  <g stroke="#3f3f46" stroke-width="2" fill="#18181b">
+    <!-- Row 1 (y=68) -->
+    <rect x="84" y="68" width="80" height="80" fill="#f4f4f5" stroke="none" />
+    <rect x="172" y="68" width="80" height="80" fill="#f4f4f5" stroke="none" />
+    <rect x="260" y="68" width="80" height="80" fill="#FF5A5F" stroke="none" />
+    <rect x="348" y="68" width="80" height="80" />
+    
+    <!-- Row 2 (y=156) -->
+    <rect x="84" y="156" width="80" height="80" />
+    <rect x="172" y="156" width="80" height="80" fill="#10B981" stroke="none" />
+    <rect x="260" y="156" width="80" height="80" fill="#FF5A5F" stroke="none" />
+    <rect x="348" y="156" width="80" height="80" fill="#FF5A5F" stroke="none" />
 
-    <!-- Row 3 (y=262) -->
-    <rect x="64" y="262" width="87" height="87" fill="#3B82F6" stroke="none" />
-    <rect x="163" y="262" width="87" height="87" fill="#10B981" stroke="none" />
-    <rect x="262" y="262" width="87" height="87" fill="#10B981" stroke="none" />
-    <rect x="361" y="262" width="87" height="87" fill="#18181b" />
+    <!-- Row 3 (y=244) -->
+    <rect x="84" y="244" width="80" height="80" fill="#3B82F6" stroke="none" />
+    <rect x="172" y="244" width="80" height="80" fill="#10B981" stroke="none" />
+    <rect x="260" y="244" width="80" height="80" fill="#10B981" stroke="none" />
+    <rect x="348" y="244" width="80" height="80" />
 
-    <!-- Row 4 (y=361) -->
-    <rect x="64" y="361" width="87" height="87" fill="#3B82F6" stroke="none" />
-    <rect x="163" y="361" width="87" height="87" fill="#3B82F6" stroke="none" />
-    <rect x="262" y="361" width="87" height="87" fill="#18181b" />
-    <rect x="361" y="361" width="87" height="87" fill="#18181b" />
+    <!-- Row 4 (y=332) -->
+    <rect x="84" y="332" width="80" height="80" fill="#3B82F6" stroke="none" />
+    <rect x="172" y="332" width="80" height="80" fill="#3B82F6" stroke="none" />
+    <rect x="260" y="332" width="80" height="80" />
+    <rect x="348" y="332" width="80" height="80" />
   </g>
 </svg>

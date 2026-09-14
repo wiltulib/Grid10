@@ -117,6 +117,7 @@ export default function App() {
       handleRestart();
     }
     setCurrentScreen('game');
+    if (window.CadeplaySDK) window.CadeplaySDK.gameplayStart();
   }, [board, pieces, handleRestart]);
 
   // Return to home screen
@@ -127,6 +128,7 @@ export default function App() {
     setShowGameOverModal(false);
     setShowSettingsModal(false);
     setCurrentScreen('home');
+    if (window.CadeplaySDK) window.CadeplaySDK.gameplayStop();
   }, []);
 
 
@@ -248,6 +250,7 @@ export default function App() {
           if (gameOver) {
             setShowGameOverModal(true);
             sound.playGameOver();
+            if (window.CadeplaySDK) window.CadeplaySDK.gameplayStop();
           }
         }, 280);
       } else {

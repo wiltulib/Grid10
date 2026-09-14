@@ -1,52 +1,22 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-  <!-- Outer Background -->
-  <rect width="512" height="512" fill="#18181b" />
-  
-  <!-- Main Container (Darker grey with crisp white border) -->
-  <rect x="60" y="44" width="392" height="424" fill="#222225" stroke="#f4f4f5" stroke-width="6" />
-
-  <!-- 
-    Padding = 24
-    Start X = 60 + 24 = 84
-    Start Y = 44 + 24 = 68
-    Gap = 8
-    Cell Size = (392 - 48 - (3 * 8)) / 4 = (344 - 24) / 4 = 320 / 4 = 80
-    Positions:
-    0: 84
-    1: 84 + 80 + 8 = 172
-    2: 172 + 80 + 8 = 260
-    3: 260 + 80 + 8 = 348
-    
-    Y Positions:
-    0: 68
-    1: 68 + 80 + 8 = 156
-    2: 156 + 80 + 8 = 244
-    3: 244 + 80 + 8 = 332
-  -->
-  
-  <g stroke="#3f3f46" stroke-width="2" fill="#18181b">
-    <!-- Row 1 (y=68) -->
-    <rect x="84" y="68" width="80" height="80" fill="#f4f4f5" stroke="none" />
-    <rect x="172" y="68" width="80" height="80" fill="#f4f4f5" stroke="none" />
+  <rect width="512" height="512" fill="#F8F7F4" />
+  <rect x="60" y="44" width="392" height="424" fill="#FFFFFF" stroke="#111113" stroke-width="8" />
+  <g stroke="#D1D5DB" stroke-width="3">
+    <rect x="84" y="68" width="80" height="80" fill="#111113" stroke="none" />
+    <rect x="172" y="68" width="80" height="80" fill="#111113" stroke="none" />
     <rect x="260" y="68" width="80" height="80" fill="#FF5A5F" stroke="none" />
-    <rect x="348" y="68" width="80" height="80" />
-    
-    <!-- Row 2 (y=156) -->
-    <rect x="84" y="156" width="80" height="80" />
+    <rect x="348" y="68" width="80" height="80" fill="#F8F7F4" />
+    <rect x="84" y="156" width="80" height="80" fill="#F8F7F4" />
     <rect x="172" y="156" width="80" height="80" fill="#10B981" stroke="none" />
     <rect x="260" y="156" width="80" height="80" fill="#FF5A5F" stroke="none" />
     <rect x="348" y="156" width="80" height="80" fill="#FF5A5F" stroke="none" />
-
-    <!-- Row 3 (y=244) -->
     <rect x="84" y="244" width="80" height="80" fill="#3B82F6" stroke="none" />
     <rect x="172" y="244" width="80" height="80" fill="#10B981" stroke="none" />
     <rect x="260" y="244" width="80" height="80" fill="#10B981" stroke="none" />
-    <rect x="348" y="244" width="80" height="80" />
-
-    <!-- Row 4 (y=332) -->
+    <rect x="348" y="244" width="80" height="80" fill="#F8F7F4" />
     <rect x="84" y="332" width="80" height="80" fill="#3B82F6" stroke="none" />
     <rect x="172" y="332" width="80" height="80" fill="#3B82F6" stroke="none" />
-    <rect x="260" y="332" width="80" height="80" />
-    <rect x="348" y="332" width="80" height="80" />
+    <rect x="260" y="332" width="80" height="80" fill="#F8F7F4" />
+    <rect x="348" y="332" width="80" height="80" fill="#F8F7F4" />
   </g>
 </svg>
